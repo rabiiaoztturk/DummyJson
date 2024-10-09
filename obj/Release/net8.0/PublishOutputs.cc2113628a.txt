@@ -1,0 +1,8 @@
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\DummyJson.exe
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\appsettings.Development.json
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\appsettings.json
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\DummyJson.dll
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\DummyJson.deps.json
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\DummyJson.runtimeconfig.json
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\DummyJson.pdb
+C:\Users\RABİA\Desktop\works\DummyJson\obj\Release\net8.0\PubTmp\Out\RestSharp.dll

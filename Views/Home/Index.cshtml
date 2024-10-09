@@ -1,0 +1,104 @@
+﻿@model FormModel
+
+@Html.ValidationSummary()
+
+@if (ViewBag.CaptchaError != null)
+{
+    <div class="alert alert-danger text-center" role="alert">
+        Recaptcha doğrulanamadı 😰
+    </div>
+}
+
+<form method="post" id="kayitFormu" class="form-colorful">
+    <label asp-for="Name" class="form-label"></label>
+    <input asp-for="Name" class="input-field" placeholder="Adınız" />
+    <span asp-validation-for="Name" class="validation-error"></span>
+
+    <label asp-for="Email" class="form-label"></label>
+    <input asp-for="Email" class="input-field" placeholder="E-posta" />
+    <span asp-validation-for="Email" class="validation-error"></span>
+
+    <button class="btn-submit g-recaptcha"
+            data-sitekey="6LfSHjQqAAAAAMzCwJfLGVxAc88DBBIA3EGh7qrX"
+            data-callback='onSubmit'
+            data-action='submit'>
+        Kaydet
+    </button>
+</form>
+
+@section Scripts {
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            kayitFormu.submit();
+        }
+    </script>
+}
+
+@section Styles {
+    <style>
+        .form-colorful {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #333;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .input-field {
+            padding: 12px;
+            font-size: 1rem;
+            border: 2px solid #00bcd4;
+            border-radius: 8px;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+            .input-field:focus {
+                border-color: #3f51b5;
+                box-shadow: 0 0 8px rgba(63, 81, 181, 0.2);
+            }
+
+        .btn-submit {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+            .btn-submit:hover {
+                background-color: #e91e63;
+                transform: scale(1.05);
+            }
+
+        .validation-error {
+            color: #ff5722;
+            font-size: 0.9rem;
+        }
+
+        .alert {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .grecaptcha-badge {
+            z-index: 1;
+        }
+    </style>
+}

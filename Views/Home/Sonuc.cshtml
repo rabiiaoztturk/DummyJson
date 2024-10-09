@@ -1,0 +1,37 @@
+﻿@section Styles {
+    <style>
+        .btn-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 8px;
+            text-decoration: none;
+            color: white;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            border: none;
+            cursor: pointer;
+            margin-right: 10px; /* Aralarındaki boşluk */
+        }
+
+            .btn-link.alert-pink {
+                background-color: #ec407a; /* Açık pembe */
+            }
+
+                .btn-link.alert-pink:hover {
+                    background-color: #d81b60; /* Daha koyu pembe */
+                }
+
+            .btn-link.alert-light-pink {
+                background-color: #f48fb1; /* Çok açık pembe */
+            }
+
+                .btn-link.alert-light-pink:hover {
+                    background-color: #f06292; /* Daha belirgin pembe */
+                }
+    </style>
+}
+
+<a href="/api" class="btn-link alert-pink">Kullanıcılar</a>
+<a href="/api/Products" class="btn-link alert-light-pink">Ürünler</a>

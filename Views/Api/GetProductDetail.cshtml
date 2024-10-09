@@ -1,0 +1,21 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = Model.title;
+}
+
+<article class="flex flex-col shadow my-4">
+    @if (Model != null)
+    {
+        <div class="bg-white flex flex-col justify-start p-6">
+            <h1 class="text-2xl font-bold pb-3">@Model.title</h1>
+            @Html.Raw(Model.description)
+            <br />
+            <strong>@Model.price $</strong>
+        </div>
+    }
+    else
+    {
+        <p>Üzgünüm böyle bir gönderi yok.</p>
+    }
+</article>

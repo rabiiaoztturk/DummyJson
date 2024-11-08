@@ -34,8 +34,8 @@ namespace DummyJson.Controllers
         public bool VerifyCaptcha(string captchaToken)
         {
             var client = new RestClient("https://www.google.com/recaptcha");
-            var request = new RestRequest("api/siteverify", Method.Post);
-            request.AddParameter("secret", "6LfSHjQqAAAAALEZwsvFOdeqSJK1hquDjG5EOSMF");
+            var request = new RestRequest("", Method.Post);
+            request.AddParameter("secret", "");
             request.AddParameter("response", captchaToken);
 
             var response = client.Execute<CaptchaResponse>(request);
